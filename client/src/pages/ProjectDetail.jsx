@@ -20,9 +20,9 @@ const ProjectDetail = () => {
     const fetchData = async () => {
       try {
         const [projectRes, tasksRes, usersRes] = await Promise.all([
-          axiosClient.get(`/projects/${id}`),
-          axiosClient.get(`/tasks/project/${id}`),
-          axiosClient.get(`/users`),
+          axiosClient.get(`api/projects/${id}`),
+          axiosClient.get(`api/tasks/project/${id}`),
+          axiosClient.get(`api/users`),
         ]);
 
         setProject(projectRes.data);
@@ -46,7 +46,7 @@ const ProjectDetail = () => {
     if (!newTaskTitle.trim()) return;
 
     try {
-      const res = await axiosClient.post("/tasks", {
+      const res = await axiosClient.post("api/tasks", {
         title: newTaskTitle,
         project_id: parseInt(id),
         assigned_to: assignedTo ? parseInt(assignedTo) : null,
@@ -62,7 +62,9 @@ const ProjectDetail = () => {
   // Update Task Status
   const updateTaskStatus = async (taskId, newStatus) => {
     try {
-      await axiosClient.patch(`/tasks/${taskId}/status`, { status: newStatus });
+      await axiosClient.patch(`api/tasks/${taskId}/status`, {
+        status: newStatus,
+      });
       setTasks(
         tasks.map((t) => (t.id === taskId ? { ...t, status: newStatus } : t)),
       );
@@ -76,7 +78,7 @@ const ProjectDetail = () => {
     if (!window.confirm("Are you sure you want to delete this task?")) return;
 
     try {
-      await axiosClient.delete(`/tasks/${taskId}`);
+      await axiosClient.delete(`api/tasks/${taskId}`);
       setTasks(tasks.filter((t) => t.id !== taskId));
     } catch (err) {
       alert("Failed to delete task");

@@ -16,7 +16,7 @@ const Login = () => {
     setError("");
 
     try {
-      const res = await axiosClient.post("/auth/login", { email, password });
+      const res = await axiosClient.post("api/auth/login", { email, password });
       login(res.data.user, res.data.token);
       navigate("/dashboard");
     } catch (err) {

@@ -7,7 +7,7 @@ const CreateProjectModal = ({ setIsModalOpen, setProjects, user }) => {
   const handleCreateProject = async (e) => {
     e.preventDefault();
     try {
-      const res = await axiosClient.post("/projects", {
+      const res = await axiosClient.post("api/projects", {
         name: newProjectName,
         description: newProjectDesc,
         owner_id: user.id,

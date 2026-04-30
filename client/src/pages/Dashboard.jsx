@@ -15,7 +15,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const res = await axiosClient.get("/projects");
+        const res = await axiosClient.get("api/projects");
         setProjects(res.data);
       } catch (err) {
         setError("Failed to load projects");
@@ -36,7 +36,7 @@ const Dashboard = () => {
     }
 
     try {
-      await axiosClient.delete(`/projects/${projectId}`);
+      await axiosClient.delete(`api/projects/${projectId}`);
       setProjects((prev) => prev.filter((p) => p.id !== parseInt(projectId)));
     } catch (err) {
       alert("Failed to delete project");
