@@ -25,7 +25,7 @@ const CreateProjectModal = ({ setIsModalOpen, setProjects, user }) => {
     <div className="fixed inset-0 bg-slate-900/50 backdrop-blur-sm flex items-center justify-center z-50 p-4">
       <div className="bg-white rounded-xl shadow-xl w-full max-w-md p-6 animate-in fade-in zoom-in-95 duration-200">
         <h3 className="text-xl font-bold text-slate-900 mb-4">
-          Create New Projectuser
+          Create New Project
         </h3>
 
         <form onSubmit={handleCreateProject} className="space-y-4">
