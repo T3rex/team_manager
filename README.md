@@ -11,6 +11,19 @@ Team Manager is a full-stack project management application featuring a real-tim
 **[🔴 Live Demo](https://team-manager-green-pi.vercel.app/)**
 
 ---
+## Screenshots
+
+<img width="1920" height="941" alt="Screenshot from 2026-04-30 21-04-32" src="https://github.com/user-attachments/assets/01eb62a1-f6eb-4d29-9220-c3972fee84b6" />
+
+<img width="1920" height="941" alt="Screenshot from 2026-04-30 21-04-55" src="https://github.com/user-attachments/assets/4045198a-9191-430a-aa12-dd6cc3a2190c" />
+
+<img width="1920" height="941" alt="Screenshot from 2026-04-30 21-15-52" src="https://github.com/user-attachments/assets/4b0af629-3f83-4482-946f-e25a68689897" />
+
+<img width="1920" height="941" alt="Screenshot from 2026-04-30 21-11-01" src="https://github.com/user-attachments/assets/afaf42f6-99cf-4a59-9b49-5910a76a8657" />
+
+
+
+
 
 ## ✨ Features
 
