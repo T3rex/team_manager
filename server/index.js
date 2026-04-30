@@ -10,14 +10,7 @@ require("./config/db");
 
 const app = express();
 
-app.use(
-  cors({
-    origin: [
-      "https://team-manager-green-pi.vercel.app/",
-      "http://localhost:5173",
-    ],
-  }),
-);
+app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
