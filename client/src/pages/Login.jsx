@@ -31,9 +31,7 @@ const Login = () => {
           <h2 className="text-3xl font-extrabold text-slate-900">
             Welcome Back
           </h2>
-          <p className="mt-2 text-sm text-slate-600">
-            Sign in to your TeamTasker account
-          </p>
+          <p className="mt-2 text-sm text-slate-600">Sign in to your account</p>
         </div>
 
         {error && (
